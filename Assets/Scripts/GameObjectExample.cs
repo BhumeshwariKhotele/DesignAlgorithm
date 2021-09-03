@@ -9,6 +9,7 @@ public class GameObjectExample : MonoBehaviour
     [SerializeField] private GameObject Cube_one;
     [SerializeField] private GameObject Cube_two;
     [SerializeField] private GameObject Cube_third;
+    [SerializeField] private GameObject Offset;
     private int pos=0;
     
     
@@ -39,9 +40,7 @@ public class GameObjectExample : MonoBehaviour
         foreach (GameObject gameitem in gameobjectqueue)
         {
              Instantiate(gameitem, transform.position + new Vector3(pos, 0, 0), Quaternion.identity);
-            gameitem.SetActive(true);
-
-            pos += 2;
+            pos += 1;
 
         }
     }
